@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home'
-
+import Portfolio from '../views/portfolio'
 
 Vue.use(VueRouter)
 
@@ -10,8 +10,12 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home
-    }
-
+    },
+    {
+        path: '/portfolio',
+        name: 'Portfolio',
+        component: Portfolio,
+    },
 ]
 
 const router = new VueRouter({
