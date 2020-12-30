@@ -2,14 +2,14 @@
   <div style="width: 100%; height: 100%; padding: 3em">
     <v-app-bar color="transparent" dense style="padding-bottom: 5%">
         <v-toolbar-title class="fontStyle" style="font-size: 30px !important">
-          Alana Robinson
+          Maicon Almeida
         </v-toolbar-title>
 
         <v-spacer></v-spacer>
 
         <v-btn text @click="toHome"> Home </v-btn>
 
-        <v-btn text> Portifólio </v-btn>
+        <v-btn text> Portfolio </v-btn>
 
         <v-btn text @click="getOut" v-if="loggedUser"> 
           {{loggedUser.name}} 
@@ -22,15 +22,15 @@
         </v-btn>
     </v-app-bar>
     <template>
-      <v-parallax :src="paralaxCasamento">
+      <v-parallax :src="paralaxWedding">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <v-btn class="beforeNone" text @click="Casamento = !Casamento">
+            <v-btn class="beforeNone" text @click="Wedding = !Wedding">
               <h1
                 class="display-1 font-weight-thin mb-4 fontStyle"
                 style="color: white !important"
               >
-                Casamento
+                Wedding
               </h1>
             </v-btn>
           </v-col>
@@ -38,15 +38,15 @@
       </v-parallax>
     </template>
     <template>
-      <v-parallax style="top: 20px; bottom: 20px" :src="paralaxArte">
+      <v-parallax style="top: 20px; bottom: 20px" :src="paralaxArt">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <v-btn class="beforeNone" text @click="Arte = !Arte">
+            <v-btn class="beforeNone" text @click="Art = !Art">
               <h1
                 class="display-1 font-weight-thin mb-4 fontStyle"
                 style="color: white !important"
               >
-                Arte
+                Art
               </h1>
             </v-btn>
           </v-col>
@@ -70,12 +70,12 @@
       </v-parallax>
     </template>
     <template>
-      <v-dialog v-model="Casamento">
+      <v-dialog v-model="Wedding">
         <v-card>
           <template>
             <v-carousel hide-delimiters>
               <v-carousel-item
-                v-for="item in casamentoItems"
+                v-for="item in weddingItems"
                 :key="item.desc"
                 :src="item.src"
               ></v-carousel-item>
@@ -85,12 +85,12 @@
       </v-dialog>
     </template>
     <template>
-      <v-dialog v-model="Arte">
+      <v-dialog v-model="Art">
         <v-card>
           <template>
             <v-carousel hide-delimiters>
               <v-carousel-item
-                v-for="item in arteItems"
+                v-for="item in artItems"
                 :key="item.desc"
                 :src="item.src"
               ></v-carousel-item>
@@ -128,18 +128,18 @@ export default {
       showMessage: null,
       messageContent: null,
       colorMessage: null,
-      paralaxCasamento: require("../src/assets/casamento_1.jpg"),
-      paralaxArte: require("../src/assets/arte_1.jpg"),
+      paralaxWedding: require("../src/assets/casamento_1.jpg"),
+      paralaxArt: require("../src/assets/arte_1.jpg"),
       paralaxFashion: require("../src/assets/fashion_1.jpg"),
-      Casamento: false,
-      Arte: false,
+      Wedding: false,
+      Art: false,
       Fashion: false,
-      casamentoItems: [
+      weddingItems: [
         { src: require("../src/assets/casamento_1.jpg"), desc: "casamento_1" },
         { src: require("../src/assets/casamento_2.jpg"), desc: "casamento_2" },
         { src: require("../src/assets/casamento_3.jpg"), desc: "casamento_3" },
       ],
-      arteItems: [
+      artItems: [
         { src: require("../src/assets/arte_1.jpg"), desc: "arte_1" },
         { src: require("../src/assets/arte_2.jpg"), desc: "arte_2" },
         { src: require("../src/assets/arte_3.jpg"), desc: "arte_3" },

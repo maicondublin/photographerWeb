@@ -14,7 +14,7 @@
 
       <v-btn text> Home </v-btn>
 
-      <v-btn text @click="toPortifolio"> Portifólio </v-btn>
+      <v-btn text @click="toPortfolio"> Portfolio </v-btn>
 
       <v-btn text @click="getOut" v-if="loggedUser"> 
           {{loggedUser.name}} 
@@ -174,7 +174,7 @@ export default {
         localStorage.clear()
         this.loggedUser = null
     },
-    toPortifolio() {
+    toPortfolio() {
         
         if(this.loggedUser) this.$router.push("/portfolio")
         else this.login = true

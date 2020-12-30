@@ -5,7 +5,7 @@ const path = require('path')
 const createUser = (data) => {
 
     if(!data.email) throw new Error('Inconsistent data!')
-    var jsonData = JSON.parse(fs.readFileSync(path.resolve('server/src/data/data.json')))
+    var jsonData = JSON.parse(fs.readFileSync(path.resolve('server/data/data.json')))
 
     if(jsonData.users[data.email]) throw new Error('User already exists!')
 
@@ -19,7 +19,7 @@ const createUser = (data) => {
     }
 
     jsonData.users[user.email] = user
-    fs.writeFileSync(path.resolve('server/src/data')+ '/data.json', JSON.stringify(jsonData))
+    fs.writeFileSync(path.resolve('server/data')+ '/data.json', JSON.stringify(jsonData))
     return ' registered user! '
 
 }
