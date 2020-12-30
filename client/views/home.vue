@@ -141,7 +141,7 @@ export default {
   name: "home",
   data() {
     return {
-      paralaxImage: require("../src/assets/home_image.jpg"),
+      paralaxImage: require("../src/assets/home_image5.jpg"),
       login: false,
       valid: false,
       newUser: false,
