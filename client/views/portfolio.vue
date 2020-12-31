@@ -140,9 +140,9 @@ export default {
         { src: require("../src/assets/wedding_6.jpg"), desc: "wedding_6" },
       ],
       artItems: [
-        { src: require("../src/assets/arte_4.jpg"), desc: "arte_4" },
-        { src: require("../src/assets/arte_2.jpg"), desc: "arte_2" },
-        { src: require("../src/assets/arte_5.jpg"), desc: "arte_5" },
+        { src: require("../src/assets/art_4.jpg"), desc: "art_4" },
+        { src: require("../src/assets/art_2.jpg"), desc: "art_2" },
+        { src: require("../src/assets/art_5.jpg"), desc: "art_5" },
       ],
       fashionItems: [
         { src: require("../src/assets/fashion_4.jpg"), desc: "fashion_4" },
